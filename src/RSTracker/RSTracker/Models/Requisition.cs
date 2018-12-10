@@ -69,6 +69,18 @@ namespace RSTracker.Models
         [Display(Name ="Last Working Day")]
         public DateTime LastWorkingDay { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Signing Date Of Division Head")]
+        public DateTime SigningDateOfDivisionHead { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Submission Date Of Reuquisition To HR")]
+        public DateTime SubmissionDateOfReuisitionToHR { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Approval Date Of CEO")]
+        public DateTime ApprovalDateOfCEO { get; set; }
+
         [Display(Name ="Status")]
         public int? StatusId { get; set;  }
         [ForeignKey("StatusId")]
