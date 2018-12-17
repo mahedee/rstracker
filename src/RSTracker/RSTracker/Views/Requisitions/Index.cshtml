@@ -21,13 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Designation.Name)
             </th>
-
             @*<th>
-                @Html.DisplayNameFor(model => model.Division.Name)
-            </th>*@
+            @Html.DisplayNameFor(model => model.Division.Name)
+        </th>*@
             @*<th>
-                @Html.DisplayNameFor(model => model.RequiredByEmp.Name)
-            </th>*@
+            @Html.DisplayNameFor(model => model.RequiredByEmp.Name)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.RaisedBy)
             </th>
@@ -35,68 +34,87 @@
                 @Html.DisplayNameFor(model => model.Status.Name)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.SubUnit.Name)
-            </th>*@
+            @Html.DisplayNameFor(model => model.SubUnit.Name)
+        </th>*@
 
             <th>
                 @Html.DisplayNameFor(model => model.RequisitionDate)
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.VacancyTypeId)
+            <th>
+                @Html.DisplayNameFor(model => model.SigningDateOfDivisionHead)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastWorkingDay)
-            </th>*@
+                @Html.DisplayNameFor(model => model.SubmissionDateOfReuisitionToHR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApprovalDateOfCEO)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.VacancyTypeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastWorkingDay)
+        </th>*@
             <th>Circular</th>
             <th></th>
         </tr>
     </thead>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RefNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dept.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Designation.Name)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.Division.Name)
-                </td>*@
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.RequiredByEmp.Name)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Employee.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status.Name)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.SubUnit.Name)
-                </td>*@
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefNo)
+        </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.RequisitionDate)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.VacancyTypeId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastWorkingDay)
-                </td>*@
-                <td>
-                    @Html.ActionLink("View", "Index","Circulars",new { requisitionId = item.Id }, null)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dept.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation.Name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Division.Name)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.RequiredByEmp.Name)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.Name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.SubUnit.Name)
+        </td>*@
+
+        <td>
+            @Html.DisplayFor(modelItem => item.RequisitionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SigningDateOfDivisionHead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionDateOfReuisitionToHR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovalDateOfCEO)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.VacancyTypeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastWorkingDay)
+        </td>*@
+        <td>
+            @Html.ActionLink("View", "Index", "Circulars", new { requisitionId = item.Id }, null)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
         }
 
 </table>
