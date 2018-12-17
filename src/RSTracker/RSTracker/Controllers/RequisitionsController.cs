@@ -46,7 +46,7 @@ namespace RSTracker.Controllers
         public ActionResult Create()
         {
             ViewBag.DeptId = new SelectList(db.Dept, "Id", "Name");
-            ViewBag.Position = new SelectList(db.Designation, "Id", "Name");
+            ViewBag.PositionId = new SelectList(db.Designation, "Id", "Name");
             ViewBag.DivisionId = new SelectList(db.Division, "Id", "Name");
             ViewBag.RequiredBy = new SelectList(db.Employee, "Id", "Name");
             ViewBag.RaisedBy = new SelectList(db.Employee, "Id", "Name");
@@ -78,7 +78,7 @@ namespace RSTracker.Controllers
             }
 
             ViewBag.DeptId = new SelectList(db.Dept, "Id", "Name", requisition.Dept);
-            ViewBag.Position = new SelectList(db.Designation, "Id", "Name", requisition.PositionId);
+            ViewBag.PositionId = new SelectList(db.Designation, "Id", "Name", requisition.PositionId);
             ViewBag.DivisionId = new SelectList(db.Division, "Id", "Name", requisition.Division);
             ViewBag.RequiredBy = new SelectList(db.Employee, "Id", "Name", requisition.RequiredBy);
             ViewBag.RaisedBy = new SelectList(db.Employee, "Id", "Name", requisition.RaisedBy);

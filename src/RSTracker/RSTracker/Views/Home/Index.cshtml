@@ -90,9 +90,9 @@
                 @Html.ActionLink("View", "Index", "Circulars", new { requisitionId = item.Id }, null)
             </td>
             <td>
-             
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
-              
+                @Html.ActionLink("Details", "Details", "Requisitions", new { id = item.Id }, null)
+                @*@Html.ActionLink("Details", "Details", "Requitions", new { detailId = item.Id })*@
+
             </td>
         </tr>
     }
