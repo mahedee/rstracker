@@ -25,8 +25,57 @@ namespace RSTracker.Models
         public virtual Requisition Requisition { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        [Display(Name = "Circular Date")]
+        [Display(Name = "Posting Of Job Ad Date")]
         public DateTime? CircularDate { get; set; }
+
+        //Added By Rakib
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "End Date Of Posting Job")]
+        public DateTime? CircularEndDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Forwarding CV To Hiring Manager")]
+        public DateTime? SendCVToHiringManagerDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Forwarding CV To HR")]
+        public DateTime? SendCVToHRDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Scheduling Aptitude Test")]
+        public DateTime? ScheduleAptitudeTestDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Conducitng Aptitude Test")]
+        public DateTime? ConductAptitudeTestDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Conducitng Technical Test")]
+        public DateTime? ConductTechnicalTestDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Selection Candidate For Final Interview")]
+        public DateTime? FinalInterviewSelectionDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Conducting Final Interview")]
+        public DateTime? ConductFinalInterviewDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Reference Check Completion Date")]
+        public DateTime? ReferenceCheckDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Final Meeting with CEO")]
+        public DateTime? FinalMeetingWithCEODate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Final Completing Medical Test")]
+        public DateTime? MedicalTestDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Date Of Final Handovering Joining Letter")]
+        public DateTime? JoiningLetterDate { get; set; }
 
         [Display(Name = "No. of CV from AD")]
         public int? NoOfCvFromAD { get; set; }
@@ -50,16 +99,16 @@ namespace RSTracker.Models
         [Display(Name = "Final Candidates")]
         public int? FinalSelectedCandidate { get; set; }
 
-        [Display(Name = "Written Test Date")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? WrittentestDate { get; set; }
+        //[Display(Name = "Written Test Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        //public DateTime? WrittentestDate { get; set; }
  
         [Display(Name = "Written test pass candidates")]
         public int? WrittenTestPassedCandidate { get; set; }
 
-        [Display(Name = "Viva date")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? VivaDate { get; set; }
+        //[Display(Name = "Viva date")]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        //public DateTime? VivaDate { get; set; }
 
         [Display(Name = "No. of candidates for viva")]
         public int? VivaCandidate { get; set; }
@@ -70,19 +119,19 @@ namespace RSTracker.Models
         [Display(Name = "Reference check")]
         public string ReferenceCheck { get; set; }
 
-        [Display(Name = "Final meeting with CEO")]
-        public string FinalMeetingWithCEO { get; set; }
+        //[Display(Name = "Final meeting with CEO")]
+        //public string FinalMeetingWithCEO { get; set; }
 
         [Display(Name = "Selected candidate details")]
         public string SelectedCandidateDetails { get; set; }
 
-        [Display(Name = "AL Issue Date")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? ALIssueDate { get; set; }
+        //[Display(Name = "AL Issue Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        //public DateTime? ALIssueDate { get; set; }
 
-        [Display(Name = "Date of joining")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? DateOfJoining { get; set; }
+        //[Display(Name = "Date of joining")]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        //public DateTime? DateOfJoining { get; set; }
 
         [Display(Name = "Process length")]
         public int? ProcessLength { get; set; }
