@@ -10,161 +10,271 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.RequisitionId, "Requisition Id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.DropDownList("RequisitionId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.RequisitionId, "", new { @class = "text-danger" })
-            </div>
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.RequisitionId, "Requisition Id", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.DropDownList("RequisitionId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.RequisitionId, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CircularDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.CircularDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CircularDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CircularDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.CircularDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CircularDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NoOfCvFromAD, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.NoOfCvFromAD, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NoOfCvFromAD, "", new { @class = "text-danger" })
-            </div>
+    @*-------------------------------------Added By Rakib-------------------------------------------*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CircularEndDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.CircularEndDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CircularEndDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NoOfCvFromOnline, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.NoOfCvFromOnline, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NoOfCvFromOnline, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CircularEndDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.CircularEndDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CircularEndDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NoOfCvFromHardcopy, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.NoOfCvFromHardcopy, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NoOfCvFromHardcopy, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SendCVToHiringManagerDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.SendCVToHiringManagerDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SendCVToHiringManagerDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NoOfCvFromRef, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.NoOfCvFromRef, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NoOfCvFromRef, "", new { @class = "text-danger" })
-            </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SendCVToHRDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.SendCVToHRDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SendCVToHRDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CvSendtoLM, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.CvSendtoLM, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CvSendtoLM, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ScheduleAptitudeTestDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ScheduleAptitudeTestDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ScheduleAptitudeTestDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SortedCvFromLM, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.SortedCvFromLM, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SortedCvFromLM, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConductAptitudeTestDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ConductAptitudeTestDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ConductAptitudeTestDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FinalSelectedCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.FinalSelectedCandidate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FinalSelectedCandidate, "", new { @class = "text-danger" })
-            </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConductTechnicalTestDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ConductTechnicalTestDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ConductTechnicalTestDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.WrittentestDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.WrittentestDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.WrittentestDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.FinalInterviewSelectionDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.FinalInterviewSelectionDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FinalInterviewSelectionDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.WrittenTestPassedCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.WrittenTestPassedCandidate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.WrittenTestPassedCandidate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConductFinalInterviewDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ConductFinalInterviewDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ConductFinalInterviewDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.VivaDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.VivaDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VivaDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ReferenceCheckDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ReferenceCheckDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ReferenceCheckDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.VivaCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.VivaCandidate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VivaCandidate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.FinalMeetingWithCEODate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.FinalMeetingWithCEODate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FinalMeetingWithCEODate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FinalVivaCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.FinalVivaCandidate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FinalVivaCandidate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.MedicalTestDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.MedicalTestDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MedicalTestDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ReferenceCheck, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.ReferenceCheck, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ReferenceCheck, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.JoiningLetterDate, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.JoiningLetterDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JoiningLetterDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FinalMeetingWithCEO, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.FinalMeetingWithCEO, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FinalMeetingWithCEO, "", new { @class = "text-danger" })
-            </div>
+    @*---------------------------------------------------End By Rakib-----------------------------------------------*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NoOfCvFromAD, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.NoOfCvFromAD, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NoOfCvFromAD, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SelectedCandidateDetails, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.SelectedCandidateDetails, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SelectedCandidateDetails, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NoOfCvFromOnline, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.NoOfCvFromOnline, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NoOfCvFromOnline, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ALIssueDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.ALIssueDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ALIssueDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NoOfCvFromHardcopy, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.NoOfCvFromHardcopy, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NoOfCvFromHardcopy, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfJoining, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.DateOfJoining, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfJoining, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NoOfCvFromRef, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.NoOfCvFromRef, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NoOfCvFromRef, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        @*<div class="form-group">
+    <div class="form-group">
+        @Html.LabelFor(model => model.CvSendtoLM, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.CvSendtoLM, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CvSendtoLM, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SortedCvFromLM, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.SortedCvFromLM, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SortedCvFromLM, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FinalSelectedCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.FinalSelectedCandidate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FinalSelectedCandidate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.WrittentestDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.WrittentestDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.WrittentestDate, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.WrittenTestPassedCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.WrittenTestPassedCandidate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.WrittenTestPassedCandidate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.VivaDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.VivaDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.VivaDate, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.VivaCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.VivaCandidate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.VivaCandidate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FinalVivaCandidate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.FinalVivaCandidate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FinalVivaCandidate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ReferenceCheck, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ReferenceCheck, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ReferenceCheck, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.FinalMeetingWithCEO, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.FinalMeetingWithCEO, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FinalMeetingWithCEO, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SelectedCandidateDetails, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.SelectedCandidateDetails, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SelectedCandidateDetails, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.ALIssueDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.ALIssueDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ALIssueDate, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.DateOfJoining, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.DateOfJoining, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DateOfJoining, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    @*<div class="form-group">
             @Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
                 @Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } })
@@ -196,13 +306,13 @@
             </div>
         </div>*@
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-primary btn-large" />||
-                @Html.ActionLink("Back to List", "Index",null, new { @class = "btn btn-outline-primary" })
-            </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-primary btn-large" />||
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-primary" })
         </div>
     </div>
+</div>
 }
 
 
@@ -217,20 +327,82 @@
             format: "DD/MM/YYYY"
         }).on('dp.change', function (e) {
             $(this).data('DateTimePicker').hide();
-        });//Initialise any date pickers
+            });//Initialise any date pickers
 
+        //------added by rakib-----------
+        $('#CircularEndDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
 
-        $('#WrittentestDate').datetimepicker({
+        $('#SendCVToHiringManagerDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#SendCVToHRDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#ScheduleAptitudeTestDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#ConductAptitudeTestDate').datetimepicker({
             format: "DD/MM/YYYY"
         }).on('dp.change', function (e) {
             $(this).data('DateTimePicker').hide();
         });//Initialise any date pickers
 
-        $('#VivaDate').datetimepicker({
+        $('#ConductTechnicalTestDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#FinalInterviewSelectionDate').datetimepicker({
             format: "DD/MM/YYYY"
         }).on('dp.change', function (e) {
             $(this).data('DateTimePicker').hide();
         });//Initialise any date pickers
+
+        $('#ConductFinalInterviewDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+        });//Initialise any date pickers
+
+        $('#ReferenceCheckDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+        });//Initialise any date pickers
+
+        $('#FinalMeetingWithCEODate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#MedicalTestDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+            });//Initialise any date pickers
+
+        $('#JoiningLetterDate').datetimepicker({
+            format: "DD/MM/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
+        });//Initialise any date pickers
+
+          //------ended by rakib-----------
 
         //$('#CreateDate').datetimepicker({
         //    format: "DD/MM/YYYY"

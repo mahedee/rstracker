@@ -26,6 +26,43 @@
                 @Html.DisplayNameFor(model => model.CircularDate)
             </th>
             <th class="hideextra">
+                @Html.DisplayNameFor(model => model.CircularEndDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.SendCVToHiringManagerDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.SendCVToHRDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.ScheduleAptitudeTestDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.ConductAptitudeTestDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.ConductTechnicalTestDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.FinalInterviewSelectionDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.ConductFinalInterviewDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.ReferenceCheckDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.FinalMeetingWithCEODate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.MedicalTestDate)
+            </th>
+            <th class="hideextra">
+                @Html.DisplayNameFor(model => model.JoiningLetterDate)
+            </th>
+
+            <th class="hideextra">
                 @Html.DisplayNameFor(model => model.NoOfCvFromAD)
             </th>
             <th class="hideextra">
@@ -46,15 +83,15 @@
             <th class="hideextra">
                 @Html.DisplayNameFor(model => model.FinalSelectedCandidate)
             </th>
-            <th class="hideextra">
-                @Html.DisplayNameFor(model => model.WrittentestDate)
-            </th>
+            @*<th class="hideextra">
+            @Html.DisplayNameFor(model => model.WrittentestDate)
+        </th>*@
             <th class="hideextra">
                 @Html.DisplayNameFor(model => model.WrittenTestPassedCandidate)
             </th>
-            <th class="hideextra">
-                @Html.DisplayNameFor(model => model.VivaDate)
-            </th>
+            @*<th class="hideextra">
+            @Html.DisplayNameFor(model => model.VivaDate)
+        </th>*@
             <th class="hideextra">
                 @Html.DisplayNameFor(model => model.VivaCandidate)
             </th>
@@ -63,110 +100,148 @@
                 @Html.DisplayNameFor(model => model.FinalVivaCandidate)
             </th>
 
-            <th class="hideextra">
-                @Html.DisplayNameFor(model => model.ALIssueDate)
-            </th>
+            @*<th class="hideextra">
+            @Html.DisplayNameFor(model => model.ALIssueDate)
+        </th>*@
 
-            <th class="hideextra">
-                @Html.DisplayNameFor(model => model.DateOfJoining)
-            </th>
+            @*<th class="hideextra">
+            @Html.DisplayNameFor(model => model.DateOfJoining)
+        </th>*@
 
             <th class="hideextra">
                 @Html.DisplayNameFor(model => model.ProcessLength)
             </th>
             @*<th>
-                    @Html.DisplayNameFor(model => model.CreateDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ModifiedDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CreatedBy)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ModifiedBy)
-                </th>*@
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>*@
             <th class="hideextra"></th>
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Requisition.RefNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CircularDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoOfCvFromAD)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoOfCvFromOnline)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoOfCvFromHardcopy)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoOfCvFromRef)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CvSendtoLM)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SortedCvFromLM)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FinalSelectedCandidate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.WrittentestDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.WrittenTestPassedCandidate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VivaDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VivaCandidate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FinalVivaCandidate)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Requisition.RefNo)
+            </td>
+            @*----------------------------added by rakib-------------------*@
+            <td>
+                @Html.DisplayFor(modelItem => item.CircularDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CircularEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SendCVToHiringManagerDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SendCVToHRDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScheduleAptitudeTestDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductAptitudeTestDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductTechnicalTestDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalInterviewSelectionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductFinalInterviewDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceCheckDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalMeetingWithCEODate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalTestDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JoiningLetterDate)
+            </td>
+          @*-------------------end by rakib---------------------------*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfCvFromAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfCvFromOnline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfCvFromHardcopy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfCvFromRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CvSendtoLM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SortedCvFromLM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalSelectedCandidate)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.WrittentestDate)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.WrittenTestPassedCandidate)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.VivaDate)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.VivaCandidate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalVivaCandidate)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.ALIssueDate)
-                </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.ALIssueDate)
+        </td>*@
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateOfJoining)
-                </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.DateOfJoining)
+        </td>*@
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProcessLength)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessLength)
+            </td>
 
 
 
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.CreateDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ModifiedDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreatedBy)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ModifiedBy)
-                    </td>*@
-                <td class="hideextra">
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>*@
+            <td class="hideextra">
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
         }
 
     </table>

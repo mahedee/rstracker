@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -230,6 +231,14 @@
     <Compile Include="Migrations\201803120711583_modifyCircular2.cs" />
     <Compile Include="Migrations\201803120711583_modifyCircular2.Designer.cs">
       <DependentUpon>201803120711583_modifyCircular2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101103167_modifyrequistion.cs" />
+    <Compile Include="Migrations\201812101103167_modifyrequistion.Designer.cs">
+      <DependentUpon>201812101103167_modifyrequistion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812180947194_modifyCircular3.cs" />
+    <Compile Include="Migrations\201812180947194_modifyCircular3.Designer.cs">
+      <DependentUpon>201812180947194_modifyCircular3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -645,6 +654,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803120711583_modifyCircular2.resx">
       <DependentUpon>201803120711583_modifyCircular2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101103167_modifyrequistion.resx">
+      <DependentUpon>201812101103167_modifyrequistion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812180947194_modifyCircular3.resx">
+      <DependentUpon>201812180947194_modifyCircular3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
